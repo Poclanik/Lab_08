@@ -85,14 +85,49 @@
 //}
 //Console.WriteLine($"Сумма: {sum}");
 //5 
-int cod = 23524;
+//int cod = 23524;
+//
+//while (true) {
+//    Console.Write("Введите код: ");
+//    int vvod = int.Parse(Console.ReadLine());
+//    if (vvod == cod) {
+//        Console.WriteLine("Дверь открыта");
+//        break;
+//    }
+//    Console.WriteLine("Неверный код, попробуйте снова");
+//}
 
-while (true) {
-    Console.Write("Введите код: ");
-    int vvod = int.Parse(Console.ReadLine());
-    if (vvod == cod) {
-        Console.WriteLine("Дверь открыта");
+//***
+int Pincod = 1234;
+int attempts = 0;
+bool access = false;
+
+while (attempts < 3) {
+    Console.Write("Введите PIN-код: ");
+    int pin = int.Parse(Console.ReadLine()!);
+
+    if (pin == Pincod) {
+        access = true;
         break;
     }
-    Console.WriteLine("Неверный код, попробуйте снова");
+
+    attempts++;
+    Console.WriteLine("Неверный PIN-код");
 }
+
+if (!access) {
+    Console.WriteLine("Карта заблокирована");
+    return;
+}
+
+int total = 0;
+Console.Write("Введите сумму снятия (0 - завершить): ");
+int am = int.Parse(Console.ReadLine()!);
+
+while (am != 0) {
+    total += am;
+    Console.Write("Введите сумму снятия (0 - завершить): ");
+    am = int.Parse(Console.ReadLine()!);
+}
+
+Console.WriteLine($"Итоговая снятая сумма: {total}");
