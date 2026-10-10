@@ -38,16 +38,61 @@
 //}
 //Console.WriteLine($"Максимальная оценка {maxcount}");
 
-string correctPassword = "qwerty123";
-int failcount = 0;
+//string correctPassword = "qwerty123";
+//int failcount = 0;
+//while (true) {
+//    Console.Write("Введите пароль от личного кабинета: ");
+//    string password = Console.ReadLine();
+//    if (password == correctPassword){
+//        Console.WriteLine("Доступ разрешён");
+//        break;
+//    }
+//    failcount++;
+//    Console.WriteLine("Неверный пароль, попробуйте снова");
+//}
+
+//string answer;
+//do {
+//    Console.Write("Введите дату посещения (например, 0,1.09):");
+//    string date = Console.ReadLine();
+//    Console.WriteLine($"Запись добавлена: {date}");
+//
+//    Console.Write("Добавить ещё одну записать? (да/нет): ");
+//    answer = Console.ReadLine();
+//} while(answer =="да");
+//Console.WriteLine("Дневник сохранен");
+
+//* a
+//int start = 0;
+//Console.WriteLine("Введите число");
+//int n = int.Parse(Console.ReadLine());
+//while (start <= 9) {start++;
+//Console.WriteLine($"{start} * {n} = {start*n}");}
+//в
+//int vvod = int.Parse(Console.ReadLine());
+//int count = 0;
+//while(vvod != -1){count += vvod; vvod = int.Parse(Console.ReadLine());}
+//Console.WriteLine($"Всего страниц прочитанно{count}");
+//** 2
+//int number = int.Parse(Console.ReadLine());
+//int sum = 0;
+//
+//while (number != 0) {
+//    if (number > 0) {
+//        sum += number;
+//    }
+//    number = int.Parse(Console.ReadLine());
+//}
+//Console.WriteLine($"Сумма: {sum}");
+//5 
+int cod = 23524;
+
 while (true) {
-    Console.Write("Введите пароль от личного кабинета: ");
-    string password = Console.ReadLine();
-    if (password == correctPassword){
-        Console.WriteLine("Доступ разрешён");
+    Console.Write("Введите код: ");
+    int vvod = int.Parse(Console.ReadLine());
+    if (vvod == cod) {
+        Console.WriteLine("Дверь открыта");
         break;
     }
-    failcount++;
-    Console.WriteLine("Неверный пароль, попробуйте снова");
+    Console.WriteLine("Неверный код, попробуйте снова");
 }
-
